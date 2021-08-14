@@ -41,39 +41,30 @@
     <script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script></head>
     <body class="theme--default">
 	
-	   <!-- Display the countdown timer in an element -->
-<p id="demo"></p>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
+	   <section data-bs-version="5" class="countdown4 cid-sFLSc9GktV mbr-fullscreen" id="countdown4-0">
+    
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h3 class="mbr-section-title mb-5 align-center mbr-fonts-style display-7"><strong>Voucher lataj za DARMO</strong></h3>
+                
+                <div class="countdown-cont align-center mb-5">
+                    <div class="daysCountdown col-xs-3 col-sm-3 col-md-3" title="Days"></div>
+                    <div class="hoursCountdown col-xs-3 col-sm-3 col-md-3" title="Hours"></div>
+                    <div class="minutesCountdown col-xs-3 col-sm-3 col-md-3" title="Minutes"></div>
+                    <div class="secondsCountdown col-xs-3 col-sm-3 col-md-3" title="Seconds"></div>
+                    <div class="countdown" data-due-date="2021/10/30"></div>
+                </div>
+                <p class="mbr-text mb-1 align-center mbr-fonts-style display-7">
+                    Nie przegap okazji...
+                </p>
+                <div class="icons-menu row justify-content-center display-7">
+                    
+            </div>
+        </div>
+    </div>
+</section>
 	    
     <script> 
             var $buoop = {
