@@ -3,7 +3,6 @@
 <html lang="pl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <html><head>
-p
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ6H5SB232"></script>
 <script>
@@ -41,17 +40,39 @@ p
     <body class="theme--default">
 	    
 	    <!--timer-->
-  <section data-bs-version="5" class="countdown4 cid-sFLSc9GktV mbr-fullscreen" id="countdown4-0">
-    
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <h3 class="mbr-section-title mb-5 align-center mbr-fonts-style display-7"><strong></strong></h3>
+(function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
 
-<iframe src="https://free.timeanddate.com/countdown/i7xqnwoy/n262/cf12/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cacf00/cpc000/pcfff/tcf1d8e7/fn3/fs120/szw448/szh189/tatVoucher%20lataj%20za%20DARMO%20z%20Ryanair/tac000/tptCzas%20Up%C5%82yno%C5%82...%20/tpc000/matOkazja%20ograniczona!!!/mac000/mpc000/iso2021-08-15T00:00:00" allowtransparency="true" frameborder="0" width="50%" height="50%"></iframe>        </div>
-    </div>
-</section>
+  let birthday = "Sep 30, 2021 00:00:00",
+      countDown = new Date(birthday).getTime(),
+      x = setInterval(function() {    
+
+        let now = new Date().getTime(),
+            distance = countDown - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+        //do something later when date is reached
+        if (distance < 0) {
+          let headline = document.getElementById("headline"),
+              countdown = document.getElementById("countdown"),
+              content = document.getElementById("content");
+
+          headline.innerText = "It's my birthday!";
+          countdown.style.display = "none";
+          content.style.display = "block";
+
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
 
 	    <script> 
             var $buoop = {
