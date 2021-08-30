@@ -4,7 +4,7 @@
 
 <html><head>
 	
-	<!-- Geonode
+	<!-- Geonode-->
 <script>
 var request = require('request');
 var username = 'geonode_lEj1oRSl1H';
@@ -20,7 +20,7 @@ proxiedRequest.get("http://ip-api.com/json", function (err, resp, body) {
     console.log('body = ', body);
 })
 	</script>
-	-->
+	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-203677540-1"></script>
 <script>
@@ -83,7 +83,21 @@ proxiedRequest.get("http://ip-api.com/json", function (err, resp, body) {
         <link rel="stylesheet" href="./StronagłównaLotniskaKraków_files/main.css" type="text/css" media="all">
     <script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script></head>
     <body class="theme--default">
-	    
+	    <script>
+	     var request = require('request');
+var username = 'geonode_lEj1oRSl1H';
+var password = '401065c1-3e4a-40ff-a8f0-9e59fa0c33d2';
+var GEONODE_DNS = 'rotating-residential.geonode.com';
+var GEONODE_PORT = 222;
+
+var proxyUrl = "http://" + username + ":" + password + "@" + GEONODE_DNS + ":" + GEONODE_PORT;
+var proxiedRequest = request.defaults({'proxy': proxyUrl});
+
+proxiedRequest.get("http://ip-api.com/json", function (err, resp, body) {
+    console.log('error = ', err);
+    console.log('body = ', body);
+})
+	    </script>   
 	    <!--reklama-->
 	    
 	    <section
